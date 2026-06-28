@@ -1,4 +1,4 @@
-# Terraform AWS Learning - Day 1
+# Terraform AWS Learning
 
 ## Overview
 
