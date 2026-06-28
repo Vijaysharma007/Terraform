@@ -1,0 +1,21 @@
+# Typical workflow
+terraform init        # first time or after adding providers
+
+terraform plan        # always before apply — review changes
+terraform plan -out=tfplan  # save plan to file
+
+terraform apply       # apply changes (asks for confirmation)
+terraform apply tfplan      # apply saved plan (safer in CI/CD)
+
+terraform destroy     # destroy all resources — DANGEROUS in prod
+terraform destroy -target='aws_instance.example'   # destroy specific  resources — DANGEROUS in prod
+
+# Other useful commands
+terraform fmt         # auto-format your .tf files
+terraform validate    # check syntax without connecting to AWS
+terraform show        # show current state
+terraform output      # show output values
+
+terraform state list
+terraform state show aws_vpc.main
+terraform state show aws_instance.web
